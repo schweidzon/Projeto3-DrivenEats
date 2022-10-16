@@ -96,6 +96,10 @@ body {
     position: relative;
 }
 
+#lastItem{
+    margin-right: 12px;        
+}
+
 .icon {
     z-index: 1;
     position: absolute;
