@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 3 - DrivenEats</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="white">
+        <div class="container">
+            <div class="header">
+                <h1>DrivenEats</h1>
+                <p>Sua comida em 6 minutos</p>
+            </div>
+            <div class="itemName first" ">
+                <h2>Primeiro, seu prato</h2>
+            </div>
+            <div class="food">
+                <div class="item 1" onclick="selectFood(this)">
+                        <img src="./images/chicken.png" alt="">                        
+                        <h3 class="plateName">Frango Yin Yang</h3>                   
+                        <p>Um pouco de batata, um pouco de salada</p>              
+                        <p>R$ 14,90</p>      
+                        <div class="icon"><ion-icon class="none" name="checkmark-circle"></ion-icon></div> 
+                </div> 
+                <div class="item 1" onclick="selectFood(this)" >
+                        <img src="https://www.sabornamesa.com.br/media/k2/items/cache/bdf0551131fb9c6e297c4de0071644c1_XL.jpg" alt="">                        
+                        <h3 class="plateName" >Yakissoba </h3>                   
+                        <p>Yakissoba de frango, carne e legumes</p>              
+                        <p>R$ 24,50</p>  
+                        <div class="icon"><ion-icon class="none" name="checkmark-circle"></ion-icon></div>      
+                </div>  
+                <div class="item 1" onclick="selectFood(this)">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-p/1c/08/84/a3/o-melhor-sushi-de-bonito.jpg" alt="">                        
+                    <h3 class="plateName" >Sushi</h3>                   
+                    <p>Combinado de sushi com 30 peças</p>              
+                    <p>R$ 80,00</p>      
+                    <div class="icon"><ion-icon class="none" name="checkmark-circle"></ion-icon></div>  
+                </div>      
+                
+            </div>
+            <div class="itemName">
+                <h2>Agora, sua bebida</h2>
+            </div>
+            <div class="beverage">
+                <div class="item 2" onclick="selectBeverage(this)">
+                    <img src="./images/choquinha.png" alt="">                        
+                    <h3>Coca-Cola zero</h3>                   
+                    <p>Lata 350 ml</p>              
+                    <p>R$ 7,00</p>   
+                    <div class="icon"><ion-icon class="none" name="checkmark-circle"> qsdqdqw</ion-icon></div>      
+            </div> 
+            <div class="item 2" onclick="selectBeverage(this)">
+                    <img src="https://www.botecogois.com.br/wp-content/uploads/2021/01/coca-lata.jpg" alt="">                        
+                    <h3>Coca-Cola normal</h3>                   
+                    <p>Lata 350 ml</p>              
+                    <p>R$ 6,90</p>   
+                    <div class="icon"><ion-icon class="none" name="checkmark-circle"> qsdqdqw</ion-icon></div>      
+            </div>  
+            <div class="item 2" onclick="selectBeverage(this)">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS94XdJoPaPm7c8XHuGmuMaJFnChUjWW_OP5g&usqp=CAU" alt="">                        
+                <h3>Guaraná Antártica</h3>                   
+                <p>Lata 350 ml</p>              
+                <p>R$ 5,90</p>      
+                <div class="icon"><ion-icon class="none" name="checkmark-circle"> qsdqdqw</ion-icon></div>   
+            </div>                  
+            
+            </div>
+            <div class="itemName">
+                <h2>Por fim, sua sobremesa</h2>
+            </div>
+            <div class="dessert  last" >
+                <div class="item 3" onclick="selectDessert(this)">
+                    <img src="./images/pudim.png" alt="">                        
+                    <h3>Pudim</h3>                   
+                    <p>Apenas pudim</p>              
+                    <p>R$ 7,90</p>    
+                    <div class="icon"><ion-icon class="none" name="checkmark-circle"> qsdqdqw</ion-icon></div>     
+                </div> 
+                <div class="item 3" onclick="selectDessert(this)" >
+                    <img src="https://www.cozinhatecnica.com/wp-content/uploads/2022/06/receita-de-petit-gateau-de-chocolate-500x500.jpg" alt="">                        
+                    <h3>Petit Gateau</h3>                   
+                    <p>Bolinho de chocolate </p>              
+                    <p>R$ 12,90</p>   
+                    <div class="icon"><ion-icon class="none" name="checkmark-circle"> qsdqdqw</ion-icon></div>      
+                </div>  
+                <div class="item 3" onclick="selectDessert(this)">
+                    <img src="https://www.sabornamesa.com.br/media/k2/items/cache/f84d217853d263e771f2d4ffc4c6fcef_XL.jpg" alt="">                        
+                    <h3>CupCake</h3>                   
+                    <p>Cupcake de oreo</p>              
+                    <p>R$ 8,90</p>       
+                    <div class="icon"><ion-icon class="none" name="checkmark-circle"> qsdqdqw</ion-icon></div>  
+                </div>    
+            
+            
+            </div>
+            <div class="sendOrder">
+                <button class="disabled">Selecione os 3 itens para fechar o pedido</button>
+                <button class="abled none" onclick="confirmation()" >Fechar pedido </button> 
+            </div>      
+
+           
+        </div>
+    </div>  
+    <div class="confirmation none">
+        <p>Confirme seu pedido</p>
+        <div class="dish1">
+            <h4>Frango</h4>
+            <p>14,90</p>
+        </div>
+        <div class="beverage1">
+            <h4>Coca</h4>
+            <p>14,90</p>
+        </div>
+        <div class="dessert1">
+            <h4>Pudim</h4>
+            <p>14,90</p>
+        </div>
+        <div class="total1">
+            <h4>Total</h4>
+            <p>23,90</p>
+        </div>
+        <div class="confirmButton" onclick="sendOrder()">
+            <p>Tudo certo, pode pedir!</p>    
+        </div>
+        <div class="cancel">               
+            <p>Cancelar</p>
+        </div>
+    </div>       
+
+
+
+
+
+<script src="./script/script.js"></script>    
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
