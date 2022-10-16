@@ -132,3 +132,23 @@ function confirmation() {
 }
 
 
+function sendOrder() {
+    console.log(platePrice)
+    let nome = prompt('Digite seu nome')
+    let end = prompt('Digite seu endereço')  
+  
+
+    let msg = `Olá, gostaria de fazer o pedido:
+               - Prato: ${plateName}
+               - Bebida: ${bevName}
+               - Sobremesa: ${desName}
+               Total: R$ ${totalPrice}`
+
+    let msgBonus = ` - Nome: ${nome}
+                     - Endereço: ${end}`
+
+
+      
+
+    window.open("https://wa.me/5591984864966?text=" + msg + msgBonus) 
+}
