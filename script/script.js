@@ -93,5 +93,15 @@ function selectDessert(dessert) {
 
 }
 
-  
+function continuar() {  
+    const btn1 = document.querySelector('.disabled')
+    const btn = document.querySelector('.abled')  
+    
+    if(plateName !== undefined && bevName !== undefined && desName !== undefined) {
+        btn1.classList.add('none')
+        btn.classList.remove('none')
+        
+    }
+    
+}   
 
