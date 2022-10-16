@@ -105,3 +105,30 @@ function continuar() {
     
 }   
 
+function confirmation() {
+    const confirm = document.querySelector('.confirmation')
+    const container = document.querySelector('.container')
+    const dishName = document.querySelector('.dish1 h4')
+    const dishPrice = document.querySelector('.dish1 p')
+    const beverage = document.querySelector('.beverage1 h4')
+    const beveragePrice = document.querySelector('.beverage1 p')
+    const dessert = document.querySelector('.dessert1 h4')
+    const dessertPrice = document.querySelector('.dessert1 p')
+    const total = document.querySelector('.total1 p')
+
+
+    confirm.classList.remove('none')
+    container.classList.add('opacity')
+    dishName.innerHTML = plateName
+    dishPrice.innerHTML = platePrice
+    beverage.innerHTML = bevName
+    beveragePrice.innerHTML = bevPrice
+    dessert.innerHTML = desName
+    dessertPrice.innerHTML = desPrice
+    totalPrice ="R$ " + (Number(platePrice.replace('R$', '').replace(',' , '.')) + Number(bevPrice.replace('R$', '').replace(',' , '.')) + Number(desPrice.replace('R$', '').replace(',' , '.'))).toFixed(2)
+    console.log(totalPrice)
+    total.innerHTML = totalPrice.replace('.' , ',')
+
+}
+
+
