@@ -117,11 +117,11 @@ function confirmation() {
     confirm.classList.remove('none');
     container.classList.add('opacity');
     dishName.innerHTML = plateName;
-    dishPrice.innerHTML = platePrice;
+    dishPrice.innerHTML = platePrice.replace("R$", "");
     beverage.innerHTML = bevName;
-    beveragePrice.innerHTML = bevPrice;
+    beveragePrice.innerHTML = bevPrice.replace("R$", "");;
     dessert.innerHTML = desName;
-    dessertPrice.innerHTML = desPrice;
+    dessertPrice.innerHTML = desPrice.replace("R$", "");;
 
     totalPrice ="R$ " + (Number(platePrice.replace('R$', '').replace(',' , '.')) + Number(bevPrice.replace('R$', '').replace(',' , '.')) + Number(desPrice.replace('R$', '').replace(',' , '.'))).toFixed(2);
     
@@ -138,10 +138,11 @@ function sendOrder() {
     let end = prompt('Digite seu endereço');   
 
     let msg = `Olá, gostaria de fazer o pedido:
-               - Prato: ${plateName}
-               - Bebida: ${bevName}
-               - Sobremesa: ${desName}
-               Total: R$ ${totalPrice}`;
+               \n- Prato: ${plateName}
+               \n- Bebida: ${bevName}
+               \n- Sobremesa: ${desName}
+               \nTotal: ${totalPrice.replace(".", ",")}
+               \n\n`;
 
     let msgBonus = ` - Nome: ${nome}
                      - Endereço: ${end}`;     
