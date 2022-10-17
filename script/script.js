@@ -145,7 +145,7 @@ function sendOrder() {
                \n\n`;
 
     let msgBonus = ` - Nome: ${nome}
-                     - Endereço: ${end}`;     
+                     \n- Endereço: ${end}`;     
 
     window.open("https://wa.me/5591984864966?text=" + msg + msgBonus);
 }
