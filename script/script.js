@@ -165,5 +165,5 @@ function sendOrder() {
     msg = encodeURIComponent(msg)
     console.log(msg)
 
-    window.open("https://wa.me/5591984864966?text=" + msg + msgBonus);
+    window.open("https://wa.me/5591999999999?text=" + msg + msgBonus);
 }
