@@ -151,18 +151,19 @@ function sendOrder() {
     let end = prompt('Digite seu endereço');   
 
     let msg = `Olá, gostaria de fazer o pedido:
-               \n- Prato: ${plateName}
-               \n- Bebida: ${bevName}
-               \n- Sobremesa: ${desName}
-               \nTotal: ${totalPrice.replace(".", ",")}
-               \n\n`;
+               - Prato: ${plateName}
+               - Bebida: ${bevName}
+               - Sobremesa: ${desName}
+               Total: ${totalPrice.replace(".", ",")}
+               `;
 
     let msgBonus = ` - Nome: ${nome}
-                     \n- Endereço: ${end}`;  
+                     - Endereço: ${end}`;  
 
     console.log(msg)
                      
     msg = encodeURIComponent(msg)
+    msgBonus = encodeURIComponent(msgBonus)
     console.log(msg)
 
     window.open("https://wa.me/5591999999999?text=" + msg + msgBonus);
