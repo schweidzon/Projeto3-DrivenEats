@@ -277,6 +277,10 @@ body {
     color: #50D074;    
     
 }
+
+.cancel {
+    cursor: pointer;
+}
     
 
 .confirmation .cancel p {

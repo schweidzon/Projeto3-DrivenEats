@@ -129,6 +129,19 @@ function confirmation() {
 
 }
 
+// Função de cancelar pedido
+
+function cancel() {
+
+    const confirm = document.querySelector('.confirmation');
+    const container = document.querySelector('.container');
+
+    confirm.classList.add('none');
+    container.classList.remove('opacity');
+
+
+}
+
 // Função de mandar o pedido pro whatsapp com mensagem pronta  //
 
 
@@ -145,7 +158,12 @@ function sendOrder() {
                \n\n`;
 
     let msgBonus = ` - Nome: ${nome}
-                     \n- Endereço: ${end}`;     
+                     \n- Endereço: ${end}`;  
+
+    console.log(msg)
+                     
+    msg = encodeURIComponent(msg)
+    console.log(msg)
 
     window.open("https://wa.me/5591984864966?text=" + msg + msgBonus);
 }
